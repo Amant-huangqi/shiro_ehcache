@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.shiro.dao.IUserDao">
+	<select id="loadByUsername" resultType="User">
+	  select * from User where username=#{username}
+	</select>
+	
+	<select id="listRoleSnByUser" resultType="String">
+	  select r.sn from UserRole ur,Role r,User u where u.id=ur.userId and r.id=ur.roleId and u.id=#{uid}
+	</select>
+	
+	<select id="listAllResource" resultType="Resource">
+	 select res.* from User u,resource res,UserRole ur,RoleResource rr where u.id=ur.userId and ur.roleId=rr.roleId  and rr.resId=res.id and u.id=#{uid}
+	</select>
+</mapper>

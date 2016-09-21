@@ -1,0 +1,15 @@
+org\shiro\realm\UserRealm.class
+org\shiro\web\InitServlet.class
+org\shiro\service\UserService.class
+org\shiro\permission\UrlPermission.class
+org\shiro\controller\LoginController.class
+org\shiro\permission\UrlPermissionResovler.class
+org\shiro\kit\ShiroKit.class
+org\shiro\filter\ResourceCheckFilter.class
+org\shiro\model\User.class
+org\shiro\model\UserRole.class
+org\shiro\model\RoleResource.class
+org\shiro\model\Resource.class
+org\shiro\service\IUserService.class
+org\shiro\dao\IUserDao.class
+org\shiro\model\Role.class
